@@ -11,7 +11,7 @@ $ docker-compose run web django-admin.py startproject composeexample .
 ```
 
 - データベースの設定をする
-```
+```python
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -24,11 +24,11 @@ DATABASES = {
 ```
 
 - コンテナを立ち上げる
-```
+```bash
 docker-compose up
 ```
 
 - /item/detection/に画像を投げる
-```
+```bash
 curl -X POST  http://localhost:8000/item/detection/ -F "image=@/Users/KoYoshizawa/Desktop/dog_img_long-chihuahua.jpg"
 ```
