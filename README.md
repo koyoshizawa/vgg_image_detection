@@ -1,3 +1,9 @@
+## やってみたこと
+- rest apiを使って機械学習させる
+- django-rest-flamework を使用する
+- kerasの学習済み画像認識モデルであるvgg16を使用する
+- Dockerで開発環境を構築する
+
 ```
 $ docker-compose run web django-admin.py startproject composeexample .
 ```
