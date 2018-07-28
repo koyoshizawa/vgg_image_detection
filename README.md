@@ -4,10 +4,13 @@
 - kerasの学習済み画像認識モデルであるvgg16を使用する
 - Dockerで開発環境を構築する
 
-```
+## メモ
+- djangoプロジェクトを作成する
+```bash
 $ docker-compose run web django-admin.py startproject composeexample .
 ```
 
+- データベースの設定をする
 ```
 DATABASES = {
     'default': {
@@ -20,12 +23,12 @@ DATABASES = {
 }
 ```
 
-
+- コンテナを立ち上げる
 ```
 docker-compose up
 ```
 
-
+- /item/detection/に画像を投げる
 ```
 curl -X POST  http://localhost:8000/item/detection/ -F "image=@/Users/KoYoshizawa/Desktop/dog_img_long-chihuahua.jpg"
 ```
